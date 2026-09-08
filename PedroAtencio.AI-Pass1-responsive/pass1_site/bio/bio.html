@@ -313,7 +313,7 @@
             <div class="photo-strip">
               <figure>
                 <img
-                  src="bio_images/pedro-fishing-river.jpg"
+                  src="images/pedro-fishing-river.jpg"
                   alt="Pedro fishing in a river"
                 />
                 <figcaption>
@@ -322,17 +322,17 @@
               </figure>
               <figure>
                 <img
-                  src="bio_images/pedro-fishing-boat.jpg"
+                  src="images/pedro-fishing-boat.jpg"
                   alt="Pedro holding a fish near a boat"
                 />
                 <figcaption>A successful production release. 🎣</figcaption>
               </figure>
               <figure>
-                <img src="bio_images/pedro-dog.jpg" alt="Family dog" />
+                <img src="images/pedro-dog.jpg" alt="Family dog" />
                 <figcaption>Quality assurance.</figcaption>
               </figure>
               <figure>
-                <img src="bio_images/pedro-cat.jpg" alt="Family cat" />
+                <img src="images/pedro-cat.jpg" alt="Family cat" />
                 <figcaption>Executive oversight.</figcaption>
               </figure>
             </div>
@@ -376,71 +376,8 @@
           localStorage.setItem("theme", next);
         });
       </script>
-
-      <!-- Right Sidebar (Chat) -->
-      <aside class="sidebar right-sidebar">
-        <section class="chatbot-panel" aria-label="PedroAtencio.AI Assistant">
-          <header class="chatbot-header">
-            <div class="chatbot-title">
-              <span class="chatbot-badge" aria-hidden="true">🤖</span>
-              <div>
-                <h2>Ask Pedro’s Assistant</h2>
-                <p class="chatbot-subtitle">
-                  AWS • AI • Architecture • Projects
-                </p>
-              </div>
-            </div>
-            <div class="chatbot-header-actions">
-              <button
-                id="chat-clear"
-                class="chatbot-icon-btn"
-                title="Clear chat"
-                aria-label="Clear chat"
-              >
-                🧹
-              </button>
-            </div>
-          </header>
-
-          <div
-            id="chat-messages"
-            class="chatbot-messages"
-            role="log"
-            aria-live="polite"
-            aria-relevant="additions"
-          ></div>
-
-          <div class="chatbot-footer">
-            <form id="chat-form" class="chatbot-form" autocomplete="off">
-              <label for="chat-input" class="sr-only">Message</label>
-              <textarea
-                id="chat-input"
-                class="chatbot-input"
-                rows="2"
-                placeholder="Ask about projects, AWS architectures, or how to contact Pedro…"
-                maxlength="1200"
-              ></textarea>
-
-              <div class="chatbot-controls">
-                <span id="chat-hint" class="chatbot-hint"
-                  >Shift+Enter = new line</span
-                >
-                <button id="chat-send" class="chatbot-send" type="submit">
-                  Send
-                </button>
-              </div>
-            </form>
-
-            <p class="chatbot-disclaimer">
-              This assistant may make mistakes. For anything important, use the
-              Contact page.
-            </p>
-          </div>
-        </section>
-      </aside>
     </div>
 
     <script src="../js/main.js"></script>
-    <script src="../js/chatbox.js"></script>
   </body>
 </html>
