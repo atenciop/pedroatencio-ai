@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PedroAtencio.AI Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../css/styles.css" />
+
+    <!-- Prevent theme flash -->
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme) document.documentElement.setAttribute("data-theme", theme);
+    </script>
+  </head>
+
+  <body>
+    <!-- Top Banner -->
+    <header class="top-banner">
+      <div class="banner-text">
+        <h1>PedroAtencio.ai AI and Cloud Examples and Solutions</h1>
+        <p>
+          Reference architectures, demos, and practical resources for
+          technologists and leaders
+        </p>
+      </div>
+      <a href="../../index.html" style="color: white">← Home</a>
+      <button id="theme-toggle" title="Toggle theme">🌗</button>
+    </header>
+
+    <div class="layout">
+      <!-- Left Sidebar -->
+      <aside class="sidebar left-sidebar">
+        <img
+          src="../../images/profile.jpg"
+          alt="Pedro Atencio photo"
+          class="profile-photo"
+        />
+        <h3 style="text-align: center">Pedro Atencio</h3>
+        <h4 style="text-align: center">
+          Information Technology<br />Project Manager
+        </h4>
+
+        <hr class="styled-line" />
+
+        <nav class="toc">
+          <h4>On this page</h4>
+          <ul id="toc-left" class="toc-list"></ul>
+          <br />
+          <a href="../../index.html">← Home</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="project-background">
+        <section class="project-section-background">
+          <div class="project-background">
+            <table class="center-text">
+              <td>
+                <img
+                  src="images/fpc-logo.png"
+                  style="max-width: 30%; border-radius: 12px"
+                />
+              </td>
+              <td>
+                <table style="border: 1px solid #e29420">
+                  <tr>
+                    <td colspan="6" style="background-color: #e29420">
+                      Primary Technologies And Tools Used To Create This Solution
+                    </td>
+                  </tr>
+                  <tr>              
+                    <td class="center-text">
+                      <a href="https://chatgpt.com/"
+                        ><img
+                          src="images/chatgpt.png"
+                          class="center-image"
+                          border-radius:12px;
+                      /></a>
+                    </td>
+                    <td class="center-text">
+                      <a href="https://code.visualstudio.com/"
+                        ><img
+                          src="images/vscode.png"
+                          class="center-image"
+                          border-radius:12px;
+                      /></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center-text">
+                      <a href="https://chatgpt.com/">ChatGPT</a>
+                    </td>
+                    <td class="center-text">
+                      <a href="https://code.visualstudio.com/"
+                        >Visual Studio Code</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </table>
+
+            <div>
+              <hr class="styled-line" />
+
+              
+
+              <h1 class="center-text">
+                PedroAtencio.ai - Financial Portfolio Copilot
+              </h1>
+              <p></p>
+              <p>Greetings!</p>
+              <p>Coming Soon................... ></p>
+
+              <hr class="dotted-line" />
+
+              <h2>Project Overview</h2>
+              <p>
+                <strong>Financial Portfolio Copilot</strong> is a new project
+                being developed with the following features: 
+                <ul style="list-style-type: none; padding: 0; margin: 0;">
+                  <li>1. AI-assisted financial analytics:
+                Natural language interaction for portfolio, credit risk,
+                delinquency, and executive reporting questions. <li>2. Curated
+                analytics data mart: Structured fact and dimension tables that
+                transform normalized banking data into analysis-ready datasets.
+                </li>
+                <li>3. Exploratory data analysis: Jupyter-based profiling for table
+                relationships, data quality, missing values, duplicate
+                detection, and business attribute distributions.</li>
+                <li> 4. Modular ETL
+                pipeline: Python-based ingestion, validation, cleansing, joins,
+                derived metrics, and analytics table creation.</li>
+                <li> 5. SQL analytics
+                engine: DuckDB or SQLite support for reproducible portfolio
+                analysis without requiring enterprise database infrastructure.
+                </li>
+                <li>6. Executive insight generation: Summaries, KPI explanations,
+                and management-ready narratives based on validated portfolio
+                metrics.</li>
+                <li>7. Interactive application layer: Streamlit interface
+                for demonstrating the copilot, analytics outputs, prompts, and
+                visual summaries.</li>
+                <li>8. AI-ready data layer: Controlled datasets
+                designed to ground LLM responses and reduce unsupported or
+                invented answers.</li>
+                <li>9. Visualization support: Matplotlib or Plotly
+                charts for portfolio exposure, delinquency trends, regional
+                performance, and risk segmentation.</li>
+                <li>10. Version-controlled
+                delivery: GitHub repository with notebooks, SQL scripts,
+                application code, requirements, and documentation for portfolio
+                demonstration</li>
+                </ul>
+              </p>
+
+
+
+
+            <!-- Disabled TOC at the bottom 
+            <nav class="toc toc-bottom">
+              <h4>Jump to section</h4>
+              <ul id="toc-bottom" class="toc-list"></ul>
+
+              <br />
+              <a href="../index.html">← Home</a>
+            </nav>
+            Disabled TOC at the bottom -->
+
+            <hr class="styled-line" />
+
+          </div>
+        </section>
+      </main>
+      <!-- End of Main content-->
+
+      <!-- Right Sidebar (Chat) -->
+       <!--  commented right sidebar  
+      <aside class="sidebar right-sidebar">
+        <section class="chatbot-panel" aria-label="PedroAtencio.AI Assistant">
+          <header class="chatbot-header">
+            <div class="chatbot-title">
+              <span class="chatbot-badge" aria-hidden="true">🤖</span>
+              <div>
+                <h2>Ask Pedro’s Assistant</h2>
+                <p class="chatbot-subtitle">
+                  AWS • AI • Architecture • Projects
+                </p>
+              </div>
+            </div>
+            <div class="chatbot-header-actions">
+              <button
+                id="chat-clear"
+                class="chatbot-icon-btn"
+                title="Clear chat"
+                aria-label="Clear chat"
+              >
+                🧹
+              </button>
+            </div>
+          </header>
+
+          <div
+            id="chat-messages"
+            class="chatbot-messages"
+            role="log"
+            aria-live="polite"
+            aria-relevant="additions"
+          ></div>
+
+          <div class="chatbot-footer">
+            <form id="chat-form" class="chatbot-form" autocomplete="off">
+              <label for="chat-input" class="sr-only">Message</label>
+              <textarea
+                id="chat-input"
+                class="chatbot-input"
+                rows="2"
+                placeholder="Ask about projects, AWS architectures, or how to contact Pedro…"
+                maxlength="1200"
+              ></textarea>
+
+              <div class="chatbot-controls">
+                <span id="chat-hint" class="chatbot-hint"
+                  >Shift+Enter = new line</span
+                >
+                <button id="chat-send" class="chatbot-send" type="submit">
+                  Send
+                </button>
+              </div>
+            </form>
+
+            <p class="chatbot-disclaimer">
+              This assistant may make mistakes. For anything important, use the
+              Contact page.
+            </p>
+          </div>
+        </section>
+      </aside>
+      commented right side bar -->
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/chatbox.js"></script>
+  </body>
+</html>
