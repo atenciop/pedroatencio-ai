@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Pedro | PedroAtencio.AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme) document.documentElement.setAttribute("data-theme", theme);
+    </script>
+    <style>
+      .bio-page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 4rem;
+      }
+      .bio-hero {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 2rem;
+        align-items: center;
+        background: var(--panel-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 18px;
+        padding: 1.6rem;
+        box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+      }
+      .bio-hero img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 16px;
+        border: 3px solid var(--accent);
+      }
+      .eyebrow {
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+      .bio-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        margin: 0.2rem 0 0.5rem;
+      }
+      .bio-hero .lead {
+        font-size: 1.08rem;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .bio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+      }
+      .bio-card {
+        background: var(--panel-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 1.35rem;
+      }
+      .bio-card h2 {
+        margin-top: 0;
+      }
+      .bio-card p,
+      .bio-card li {
+        line-height: 1.65;
+      }
+      .journey {
+        grid-column: 1/-1;
+      }
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .timeline div {
+        border-left: 3px solid var(--accent);
+        padding-left: 0.85rem;
+      }
+      .timeline strong {
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+      }
+      .skill-tags span {
+        border: 1px solid var(--border-color);
+        background: var(--bg-color);
+        padding: 0.42rem 0.7rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+      }
+      .photo-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+      .photo-strip figure {
+        margin: 0;
+      }
+      .photo-strip img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      .photo-strip figcaption {
+        font-size: 0.82rem;
+        text-align: center;
+        margin-top: 0.35rem;
+      }
+      .quote {
+        border-left: 4px solid var(--accent);
+        padding: 0.8rem 1rem;
+        background: var(--bg-color);
+        border-radius: 0 10px 10px 0;
+        font-style: italic;
+      }
+      .back-link {
+        display: inline-block;
+        margin: 1.2rem 0;
+        color: inherit;
+        font-weight: 650;
+        text-decoration: none;
+      }
+      .back-link:hover {
+        color: var(--accent);
+      }
+      @media (max-width: 760px) {
+        .bio-hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .bio-hero img {
+          max-width: 220px;
+          margin: auto;
+        }
+        .bio-grid {
+          grid-template-columns: 1fr;
+        }
+        .journey {
+          grid-column: auto;
+        }
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+        .photo-strip {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .top-banner {
+          padding: 0 1rem;
+        }
+        .banner-text p {
+          display: none;
+        }
+      }
+      @media (max-width: 430px) {
+        .photo-strip {
+          grid-template-columns: 1fr;
+        }
+        .photo-strip img {
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Banner -->
+    <header class="top-banner">
+      <div class="banner-text">
+        <h1>PedroAtencio.ai AI and Cloud Examples and Solutions</h1>
+        <p>
+          Reference architectures, demos, and practical resources for
+          technologists and leaders
+        </p>
+      </div>
+      <a href="../index.html" style="color: white">← Home</a>
+      <button id="theme-toggle" title="Toggle theme">🌗</button>
+    </header>
+
+    <div class="layout">
+      <!-- Left Sidebar -->
+      <aside class="sidebar left-sidebar">
+        <img
+          src="../images/profile.jpg"
+          alt="Pedro Atencio photo"
+          class="profile-photo"
+        />
+        <h3 style="text-align: center">Pedro Atencio</h3>
+        <h4 style="text-align: center">
+          Information Technology<br />Project Manager
+        </h4>
+
+        <hr class="styled-line" />
+
+        <nav class="toc">
+          <h4>On this page</h4>
+          <ul id="toc-left" class="toc-list"></ul>
+          <br />
+          <a href="../index.html">← Home</a>
+        </nav>
+      </aside>
+      <!-- Main Content -->
+      <main class="bio-page">
+        <section class="bio-hero">
+          <img src="images/pedro-professional.jpg" alt="Pedro Atencio" />
+          <div>
+            <div class="eyebrow">About Pedro</div>
+            <h1>Technology leader. Lifelong learner. Builder.</h1>
+            <p class="lead">
+              I'm Pedro Atencio, a technical project manager and Scrum leader
+              with more than 15 years of experience delivering healthcare IT,
+              enterprise applications, modernization, data, and cloud
+              initiatives. I enjoy working where business goals, people, and
+              technology meet — especially when there is a complicated problem
+              to turn into an executable plan.
+            </p>
+          </div>
+        </section>
+
+        <div class="bio-grid">
+          <section class="bio-card journey">
+            <h2>🌎 A Journey with a Few Detours</h2>
+            <p>
+              I was born in Cuba, spent much of my early life in Puerto Rico,
+              and lived in Miami from my teens. In 1999, technology consulting
+              took me to California and Silicon Valley. The job involved 100%
+              travel which was excellent for accumulating experience and airline
+              miles, less ideal for building a family life.
+            </p>
+            <p>
+              After getting married, I traded constant consulting travel for a
+              role with Apple Computer and moved to Austin. A few years later,
+              family brought us to Tennessee, where I've now lived for more than
+              two decades near Nashville with my wife and youngest daughter.
+            </p>
+            <div class="quote">
+              The locations and technologies have changed over the years, but
+              curiosity has been a pretty reliable constant.
+            </div>
+          </section>
+
+          <section class="bio-card">
+            <h2>🧭 What I Do</h2>
+            <p>
+              My career has increasingly centered on leading technical delivery
+              across product, engineering, data, cloud, business, and customer
+              teams. I have managed Agile and hybrid initiatives, geographically
+              distributed teams, complex dependencies, budgets, risks, and the
+              inevitable surprises that don't appear on a project plan.
+            </p>
+            <div class="skill-tags">
+              <span>Project Leadership</span><span>Scrum & Agile</span
+              ><span>Cloud</span><span>Data</span
+              ><span>Application Delivery</span><span>Stakeholders</span
+              ><span>AI</span>
+            </div>
+          </section>
+
+          <section class="bio-card">
+            <h2>🎓 Still Learning</h2>
+            <p>
+              My foundation is a B.S. in Computer Science and an MBA from
+              Florida International University, complemented by a Graduate
+              Certificate in Data Science from Harvard Extension School.
+            </p>
+            <p>
+              Professional certifications include PMP, SAFe Scrum Master,
+              Certified Scrum Master, Certified Scrum Product Owner, AWS
+              Certified AI Practitioner, and AWS Certified Cloud Practitioner.
+            </p>
+          </section>
+
+          <section class="bio-card journey">
+            <h2>💼 The Professional Version - Short Edition</h2>
+            <div class="timeline">
+              <div>
+                <strong>Caterpillar Financial</strong>Project leadership across
+                application development, data integration, enterprise
+                technology, AWS/Snowflake initiatives, and distributed delivery
+                teams.
+              </div>
+              <div>
+                <strong>Cognizant Technology Solutions</strong>A decade leading
+                healthcare technology, cloud migration, application
+                modernization, data quality, analytics, and client-facing
+                consulting engagements.
+              </div>
+              <div>
+                <strong>Hewlett-Packard Enterprise Services</strong>Healthcare
+                IT and Medicaid systems work, including application integration
+                and system changes that produced substantial savings for the
+                State of Tennessee.
+              </div>
+            </div>
+          </section>
+
+          <section class="bio-card journey">
+            <h2>🎣 Away from the Keyboard</h2>
+            <p>
+              Fishing has been one of my passions since I was about six years
+              old. I also enjoy hiking and aviation. Technology may be good at
+              keeping my brain busy, but being outdoors is a pretty effective
+              reboot.
+            </p>
+            <div class="photo-strip">
+              <figure>
+                <img
+                  src="bio/pedro-fishing-river.jpg"
+                  alt="Pedro fishing in a river"
+                />
+                <figcaption>
+                  Sometimes the best dashboard is a river.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="bio/pedro-fishing-boat.jpg"
+                  alt="Pedro holding a fish near a boat"
+                />
+                <figcaption>A successful production release. 🎣</figcaption>
+              </figure>
+              <figure>
+                <img src="bio/pedro-dog.jpg" alt="Family dog" />
+                <figcaption>Quality assurance.</figcaption>
+              </figure>
+              <figure>
+                <img src="bio/pedro-cat.jpg" alt="Family cat" />
+                <figcaption>Executive oversight.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="bio-card journey">
+            <h2>🚀 What I'm Building Now</h2>
+            <p>
+              PedroAtencio.AI is where I bring these threads together: project
+              leadership, software and cloud architecture, AI, data, and
+              continuous learning. The projects on this site are intended to
+              show not only finished results, but also how I define problems,
+              make design decisions, learn new technologies, troubleshoot
+              issues, and turn ideas into working solutions.
+            </p>
+            <h3>Current Project</h3>
+            <p>
+              <a
+                href="../projects/financial-portfolio-copilot/fpc-project.html"
+                class="centered-link"
+              >
+                <img
+                  src="../projects/financial-portfolio-copilot/images/fpc-logo.png"
+                  alt="Financial Portfolio Copilot"
+                  style="max-width: 10%"
+                />AI-assisted Financial Portfolio Analytics platform that
+                demonstrates the complete lifecycle of an enterprise analytics
+                solution
+              </a>
+            </p>
+          </section>
+        </div>
+        <hr class="styled-line" />
+      </main>
+      <script>
+        const btn = document.getElementById("theme-toggle");
+        btn.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme");
+          const next = current === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+        });
+      </script>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

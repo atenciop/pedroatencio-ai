@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PedroAtencio.AI Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Prevent theme flash -->
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme) document.documentElement.setAttribute("data-theme", theme);
+    </script>
+  </head>
+
+  <body>
+    <!-- Top Banner -->
+    <header class="top-banner">
+      <div class="banner-text">
+        <h1>PedroAtencio.ai AI and Cloud Examples and Solutions</h1>
+        <p>
+          Reference architectures, demos, and practical resources for
+          technologists and leaders
+        </p>
+      </div>
+      <button id="theme-toggle" title="Toggle theme">🌗</button>
+    </header>
+
+    <div class="layout">
+      <!-- Left Sidebar -->
+      <aside class="sidebar left-sidebar">
+        <section>
+          <img
+            src="images/profile.jpg"
+            alt="Pedro Atencio photo"
+            class="profile-photo"
+          />
+
+          <h3 style="text-align: center">Pedro Atencio</h3>
+          <h4 style="text-align: center">
+            Information Technology<br />Project Manager
+          </h4>
+
+          <div class="profile-links">
+            <a
+              class="bio-link"
+              href="/bio/bio.html"
+              aria-label="Learn more about Pedro Atencio"
+            >
+              About Pedro <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <hr class="styled-line" />
+
+          <h3 style="text-align: center">Certifications</h3>
+          <div class="certifications">
+            <!-- logos and links to certifications -->
+
+            <!-- refactor: center the certifications content in a simpler and more elegant way such as CSS-->
+            <table class="center-table" border="0">
+              <tr>
+                <td align="center">
+                  <div
+                    data-iframe-width="150"
+                    data-iframe-height="270"
+                    data-share-badge-id="ab618cfd-4761-429b-a165-e502de203070"
+                    data-share-badge-host="https://www.credly.com"
+                  ></div>
+                  <script
+                    type="text/javascript"
+                    async
+                    src="//cdn.credly.com/assets/utilities/embed.js"
+                  ></script>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <div
+                    data-iframe-width="150"
+                    data-iframe-height="270"
+                    data-share-badge-id="4d6a7b74-8a1d-4af5-a5a0-40dae94f8fd6"
+                    data-share-badge-host="https://www.credly.com"
+                  ></div>
+                  <script
+                    type="text/javascript"
+                    async
+                    src="//cdn.credly.com/assets/utilities/embed.js"
+                  ></script>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <div
+                    data-iframe-width="150"
+                    data-iframe-height="270"
+                    data-share-badge-id="6a0f39be-5927-431c-9cce-ddd8bdb8d7cd"
+                    data-share-badge-host="https://www.credly.com"
+                  ></div>
+                  <script
+                    type="text/javascript"
+                    async
+                    src="//cdn.credly.com/assets/utilities/embed.js"
+                  ></script>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <div
+                    data-iframe-width="150"
+                    data-iframe-height="270"
+                    data-share-badge-id="92d1baef-35d6-44e8-af67-6367e17e5b7f"
+                    data-share-badge-host="https://www.credly.com"
+                  ></div>
+                  <script
+                    type="text/javascript"
+                    async
+                    src="//cdn.credly.com/assets/utilities/embed.js"
+                  ></script>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://extension.harvard.edu/academics/programs/data-science-graduate-certificate/"
+                    class="education-logo"
+                    target="_blank"
+                  >
+                    <img src="images/hes-shield.png" alt="HES" />
+                    <h4 style="text-align: center">
+                      Harvard Extension School<br />Graduate Data Science
+                      Certificate
+                    </h4>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <hr class="styled-line" />
+                  <h3 style="text-align: center">Education</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://business.fiu.edu/academics/graduate/index.html"
+                    class="education-logo"
+                    target="_blank"
+                  >
+                    <img src="images/fiu-seal-sm1.png" alt="FIU" />
+                    <h4 style="text-align: center">
+                      Florida International University<br />Masters in Business
+                      Administration
+                    </h4>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://catalog.fiu.edu/programs/COMPSC:BS"
+                    class="education-logo"
+                    target="_blank"
+                  >
+                    <img src="images/fiu-seal-sm1.png" alt="FIU" />
+
+                    <h4 style="text-align: center">
+                      Florida International University<br />Bachelor of Computer
+                      Science
+                    </h4>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://www.mdc.edu/computerscience/"
+                    class="education-logo"
+                    target="_blank"
+                  >
+                    <img src="images/miami-dade-white-and-blue.png" alt="MDC" />
+                    <h4 style="text-align: center">
+                      Miami-Dade College Associate in Arts - Computer Science
+                    </h4>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <section class="projects-grid">
+          <!-- First Project Tile-->
+          <a
+            href="projects/pedroatencio-ai-site/pedroatencio-ai-project.html"
+            class="project-tile"
+          >
+            <img
+              src="projects/pedroatencio-ai-site/images/pedroatencio-ai-logo.png"
+              style="max-width: 20%; border-radius: 12px"
+            />
+            <h3>Portfolio Web Site Hosted on AWS</h3>
+            <div class="tags">
+              <span class="tag">Secured/Encrypted</span>
+              <span class="tag">S3</span>
+              <span class="tag">Cloudfront</span>
+              <span class="tag">Cloudfare</span>
+              <span class="tag">Custom Domain</span>
+              <span class="tag">AWS Certificate</span>
+            </div>
+            <p>
+              Scalable, secured site with simple navigation utilizing
+              Cloudfront.
+            </p>
+          </a>
+
+          <a
+            href="projects/financial-portfolio-copilot/fpc-project.html"
+            class="project-tile"
+          >
+            <img
+              src="projects/financial-portfolio-copilot/images/fpc-logo.png"
+              alt="Financial Portfolio Copilot"
+              style="max-width: 20%; border-radius: 12px"
+            />
+            <h3>Coming Soon: Financial Portfolio Copilot</h3>
+            <div class="tags">
+              <span class="tag">Financial Portfolio Data</span>
+              <span class="tag">Modular ETL pipeline</span>
+              <span class="tag">Analytics Data Modeling</span>
+              <span class="tag">AI-assisted Business Insights</span>
+              <span class="tag">Interactive Application Layer</span>
+            </div>
+            <p>
+              AI-assisted Financial Portfolio Analytics platform that
+              demonstrates the complete lifecycle of an enterprise analytics
+              solution
+            </p>
+          </a>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
