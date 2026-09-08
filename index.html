@@ -201,7 +201,7 @@
           >
             <img
               src="projects/pedroatencio-ai-site/images/pedroatencio-ai-logo.png"
-              style="max-width: 20%; border-radius: 12px"
+             
             />
             <h3>Portfolio Web Site Hosted on AWS</h3>
             <div class="tags">
@@ -225,7 +225,7 @@
             <img
               src="projects/financial-portfolio-copilot/images/fpc-logo.png"
               alt="Financial Portfolio Copilot"
-              style="max-width: 20%; border-radius: 12px"
+             
             />
             <h3>Coming Soon: Financial Portfolio Copilot</h3>
             <div class="tags">
@@ -243,71 +243,8 @@
           </a>
         </section>
       </main>
-
-      <!-- Right Sidebar (Chat) -->
-      <aside class="sidebar right-sidebar">
-        <section class="chatbot-panel" aria-label="PedroAtencio.AI Assistant">
-          <header class="chatbot-header">
-            <div class="chatbot-title">
-              <span class="chatbot-badge" aria-hidden="true">🤖</span>
-              <div>
-                <h2>Ask Pedro’s Assistant</h2>
-                <p class="chatbot-subtitle">
-                  AWS • AI • Architecture • Projects
-                </p>
-              </div>
-            </div>
-            <div class="chatbot-header-actions">
-              <button
-                id="chat-clear"
-                class="chatbot-icon-btn"
-                title="Clear chat"
-                aria-label="Clear chat"
-              >
-                🧹
-              </button>
-            </div>
-          </header>
-
-          <div
-            id="chat-messages"
-            class="chatbot-messages"
-            role="log"
-            aria-live="polite"
-            aria-relevant="additions"
-          ></div>
-
-          <div class="chatbot-footer">
-            <form id="chat-form" class="chatbot-form" autocomplete="off">
-              <label for="chat-input" class="sr-only">Message</label>
-              <textarea
-                id="chat-input"
-                class="chatbot-input"
-                rows="2"
-                placeholder="Ask about projects, AWS architectures, or how to contact Pedro…"
-                maxlength="1200"
-              ></textarea>
-
-              <div class="chatbot-controls">
-                <span id="chat-hint" class="chatbot-hint"
-                  >Shift+Enter = new line</span
-                >
-                <button id="chat-send" class="chatbot-send" type="submit">
-                  Send
-                </button>
-              </div>
-            </form>
-
-            <p class="chatbot-disclaimer">
-              This assistant may make mistakes. For anything important, use the
-              Contact page.
-            </p>
-          </div>
-        </section>
-      </aside>
     </div>
 
     <script src="js/main.js" defer></script>
-    <script src="js/chatbox.js" defer></script>
   </body>
 </html>
