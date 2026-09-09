@@ -55,103 +55,47 @@
       <main class="project-background">
         <section class="project-section-background">
           <div class="project-background">
-            <table class="center-text">
-              <td>
+            <div class="project-intro-grid">
+              <div class="project-hero-panel">
                 <img
                   src="images/home-page-screenshot.jpeg"
-                  style="max-width: 80%; border-radius: 12px"
+                  alt="PedroAtencio.AI home page screenshot"
+                  class="project-hero-image"
                 />
-              </td>
-              <td>
-                <table style="border: 1px solid #e29420">
-                  <tr>
-                    <td colspan="6" style="background-color: #e29420">
-                      Primary Technologies And Tools Used To Create This Site
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="center-text">
-                      <a href="https://aws.amazon.com/s3/"
-                        ><img
-                          src="images/s3.jpg"
-                          class="center-image"
-                          border-radius:12px;
-                      /></a>
-                    </td>
-                    <td class="center-text">
-                      <a href="https://aws.amazon.com/cloudfront/">
-                        <img
-                          src="images/cloudfront.jpg"
-                          class="center-image"
-                          border-radius:12px;
-                      /></a>
-                    </td>
-                    <td class="center-text">
-                      <a href="https://aws.amazon.com/certificate-manager/"
-                        ><img
-                          src="images/certificatemanager.jpg"
-                          class="center-image"
-                          border-radius:12px;
-                      /></a>
-                    </td>
-                    <td class="center-text">
-                      <a
-                        href="https://www.cloudflare.com/application-services/products/dns/"
-                        ><img
-                          src="images/cloudfare.png"
-                          class="center-image"
-                          border-radius:12px;
-                      /></a>
-                    </td>
-                    <td class="center-text">
-                      <a href="https://chatgpt.com/"
-                        ><img
-                          src="images/chatgpt.png"
-                          class="center-image"
-                          border-radius:12px;
-                      /></a>
-                    </td>
-                    <td class="center-text">
-                      <a href="https://code.visualstudio.com/"
-                        ><img
-                          src="images/vscode.png"
-                          class="center-image"
-                          border-radius:12px;
-                      /></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="center-text">
-                      <a href="https://aws.amazon.com/s3/">AWS S3</a>
-                    </td>
-                    <td class="center-text">
-                      <a href="https://aws.amazon.com/cloudfront/"
-                        >AWS Cloudfront</a
-                      >
-                    </td>
-                    <td class="center-text">
-                      <a href="https://aws.amazon.com/certificate-manager/"
-                        >AWS Certificate<br />Manager</a
-                      >
-                    </td>
-                    <td class="center-text">
-                      <a
-                        href="https://www.cloudflare.com/application-services/products/dns/"
-                        >Cloudfare DNS</a
-                      >
-                    </td>
-                    <td class="center-text">
-                      <a href="https://chatgpt.com/">ChatGPT</a>
-                    </td>
-                    <td class="center-text">
-                      <a href="https://code.visualstudio.com/"
-                        >Visual Studio Code</a
-                      >
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </table>
+              </div>
+
+              <section class="technology-panel" aria-labelledby="site-tech-title">
+                <h2 id="site-tech-title" class="technology-panel-title">
+                  Primary Technologies and Tools Used to Create This Site
+                </h2>
+                <div class="technology-grid">
+                  <a class="technology-card" href="https://aws.amazon.com/s3/">
+                    <img src="images/s3.jpg" alt="Amazon S3" />
+                    <span>AWS S3</span>
+                  </a>
+                  <a class="technology-card" href="https://aws.amazon.com/cloudfront/">
+                    <img src="images/cloudfront.jpg" alt="Amazon CloudFront" />
+                    <span>AWS CloudFront</span>
+                  </a>
+                  <a class="technology-card" href="https://aws.amazon.com/certificate-manager/">
+                    <img src="images/certificatemanager.jpg" alt="AWS Certificate Manager" />
+                    <span>AWS Certificate Manager</span>
+                  </a>
+                  <a class="technology-card" href="https://www.cloudflare.com/application-services/products/dns/">
+                    <img src="images/cloudfare.png" alt="Cloudflare" />
+                    <span>Cloudflare DNS</span>
+                  </a>
+                  <a class="technology-card" href="https://chatgpt.com/">
+                    <img src="images/chatgpt.png" alt="ChatGPT" />
+                    <span>ChatGPT</span>
+                  </a>
+                  <a class="technology-card" href="https://code.visualstudio.com/">
+                    <img src="images/vscode.png" alt="Visual Studio Code" />
+                    <span>Visual Studio Code</span>
+                  </a>
+                </div>
+              </section>
+            </div>
 
             <div>
               <hr class="styled-line" />
@@ -202,9 +146,9 @@
               </p>
 
               <h3>Project at a Glance</h3>
+              <div class="table-scroll">
               <table
-                class="center-table"
-                style="border-collapse: collapse; width: 90%"
+                class="center-table project-summary-table"
               >
                 <tbody>
                   <tr>
@@ -262,6 +206,7 @@
                   </tr>
                 </tbody>
               </table>
+              </div>
 
               <h2>Requirements</h2>
               <p>
@@ -410,37 +355,23 @@
                 and an AI-assistant interface.
               </p>
 
-              <table class="center-table" style="border: 1px solid #e29420">
-                <tr>
-                  <td
-                    colspan="2"
-                    style="background-color: #e29420"
-                    class="center-text"
-                  >
-                    Initial Home Page Design
-                  </td>
-                </tr>
-                <tr style="border: 13px #e29420" class="center-text">
-                  <td>Draft Using Whiteboard</td>
-                  <td>Draft Using Figma</td>
-                </tr>
-                <tr>
-                  <td class="center-text" style="background-color: #c3c1be">
-                    <img
-                      src="images/layout-brainstorm-white-board.jpeg"
-                      class="center-image"
-                      alt="Initial PedroAtencio.AI home page whiteboard sketch"
-                    />
-                  </td>
-                  <td class="center-text" style="background-color: #d6e8aadc">
-                    <img
-                      src="images/pedroatencio-ai-figma.png"
-                      class="center-image"
-                      alt="PedroAtencio.AI home page design created in Figma"
-                    />
-                  </td>
-                </tr>
-              </table>
+              <section class="design-comparison" aria-labelledby="initial-design-title">
+                <h3 id="initial-design-title" class="design-comparison-title">Initial Home Page Design</h3>
+                <figure class="design-card">
+                  <figcaption>Draft Using Whiteboard</figcaption>
+                  <img
+                    src="images/layout-brainstorm-white-board.jpeg"
+                    alt="Initial PedroAtencio.AI home page whiteboard sketch"
+                  />
+                </figure>
+                <figure class="design-card">
+                  <figcaption>Draft Using Figma</figcaption>
+                  <img
+                    src="images/pedroatencio-ai-figma.png"
+                    alt="PedroAtencio.AI home page design created in Figma"
+                  />
+                </figure>
+              </section>
               <p>
                 The comparison between the original sketch and the Figma design
                 documents an important part of the project's development
@@ -471,43 +402,11 @@
                 Below is the initial prompt that I used to generate the code in
                 ChatGPT
               </p>
-              <table
-                border="1"
-                height="110"
-                style="
-                  border-collapse: collapse;
-                  width: 58.6907%;
-                  height: 110px;
-
-                  border-color: #bfedd2;
-                  border-style: outset;
-                "
-                class="center-table"
-              >
-                <tbody>
-                  <tr>
-                    <td style="width: 99.9474%">
-                      <p>
-                        I want to have this tool generate code that I can later
-                        update in Visual Studio code and load to an Amazon S3
-                        bucket. I have a design in mind. A banner at the top
-                        with the site heading: AI and Cloud Example Solutions
-                        and Useful Resources. There will be a frame on the left
-                        that will contain my photo and below the photo clickable
-                        images of certifications and other awards. The main body
-                        of the page will contain tiles for each of my sample
-                        projects. The tile will have a screenshot of the
-                        solution with a short textual description. On the right
-                        side will be a frame that will eventually display a
-                        chatbot window where people can prompt for information
-                        about me, the projects and content found on my site. The
-                        entire site must employ a responsive design to be
-                        functional in both, desktop and mobile browsers.
-                      </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <blockquote class="prompt-example">
+                <p>
+                  I want to have this tool generate code that I can later update in Visual Studio Code and load to an Amazon S3 bucket. I have a design in mind. A banner at the top with the site heading: AI and Cloud Example Solutions and Useful Resources. There will be a frame on the left that will contain my photo and below the photo clickable images of certifications and other awards. The main body of the page will contain tiles for each of my sample projects. The tile will have a screenshot of the solution with a short textual description. On the right side will be a frame that will eventually display a chatbot window where people can prompt for information about me, the projects and content found on my site. The entire site must employ a responsive design to be functional in both desktop and mobile browsers.
+                </p>
+              </blockquote>
               <p>&nbsp;</p>
               <p style="padding-left: 40px">
                 Below is the initial home page generated by ChatGPT. ChatGPT
