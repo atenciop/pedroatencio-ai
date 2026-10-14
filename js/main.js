@@ -1,6 +1,6 @@
 const themeToggle = document.getElementById("theme-toggle");
 
-themeToggle.addEventListener("click", () => {
+themeToggle?.addEventListener("click", () => {
   const current = document.documentElement.getAttribute("data-theme");
   const next = current === "dark" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", next);
@@ -65,7 +65,7 @@ const form = document.getElementById("chatbot-form");
 const input = document.getElementById("chatbot-input");
 const messages = document.getElementById("chatbot-messages");
 
-form.addEventListener("submit", (e) => {
+if (form && input && messages) form.addEventListener("submit", (e) => {
   e.preventDefault();
   const text = input.value.trim();
   if (!text) return;

@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI-Powered Job Search Agent: technical feasibility, development roadmap, LLM job matching and cloud deployment."
+    />
+    <title>AI-Powered Job Search Agent | PedroAtencio.AI</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script>
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme) document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <header class="top-banner">
+      <div class="banner-text">
+        <h1>PedroAtencio.ai AI and Cloud Examples and Solutions</h1>
+        <p>
+          Reference architectures, demos, and practical resources for
+          technologists and leaders
+        </p>
+      </div>
+      <a href="../../index.html" style="color: white">← Home</a
+      ><button
+        id="theme-toggle"
+        title="Toggle theme"
+        aria-label="Toggle color theme"
+      >
+        🌗
+      </button>
+    </header>
+    <div class="layout">
+      <aside class="sidebar left-sidebar">
+        <img
+          src="../../images/profile.jpg"
+          alt="Pedro Atencio"
+          class="profile-photo"
+        />
+        <h3 style="text-align: center">Pedro Atencio</h3>
+        <h4 style="text-align: center">
+          Information Technology<br />Project Manager
+        </h4>
+        <hr class="styled-line" />
+        <nav class="toc" aria-label="Page contents">
+          <h4>On this page</h4>
+          <ul id="toc-left" class="toc-list"></ul>
+          <a href="../../index.html">← Home</a>
+        </nav>
+      </aside>
+      <main class="project-background">
+        <article class="jsa-page">
+          <p class="jsa-eyebrow">Portfolio project · Python / AI / Cloud</p>
+          <h1>AI-Powered Job Search Agent</h1>
+          <div class="jsa-meta">
+            <span class="jsa-status jsa-status-progress">In Progress</span
+            ><span>Local MVP: <strong>October 23, 2026</strong></span
+            ><span>Cloud target: <strong>October 30, 2026</strong></span>
+          </div>
+          <p class="jsa-lead">
+            A Python application designed to retrieve job opportunities, compare
+            descriptions against an applicant's resume and preferences using an
+            LLM, and produce a ranked, explainable HTML report.
+          </p>
+          <div class="jsa-actions">
+            <a class="jsa-button" href="#development-roadmap">View roadmap ↓</a
+            ><span
+              class="jsa-button"
+              aria-disabled="false"
+              title="GitHub repository URL"
+              ><a
+                href="https://github.com/atenciop/job-search-agent"
+                target="_blank"
+                ><i class="fab fa-github"></i> GitHub Repository</a
+              ></span
+            >
+            <span
+              class="jsa-button"
+              aria-disabled="fase"
+              title="GitHub repository "
+            >
+              <a
+                href="https://github.com/atenciop/job-search-agent/archive/refs/heads/main.zip"
+                target="_blank"
+                ><i class="fab fa-github"></i> Download ZIP</a
+              ></span
+            >
+          </div>
+          <section class="jsa-panel">
+            <h2 id="project-overview">Project Overview</h2>
+            <p>
+              The agent will accept a PDF or DOCX resume and job-search
+              preferences, collect job listings from supported sources,
+              normalize and deduplicate the results, evaluate fit using a large
+              language model, and create a report containing scores,
+              explanations, gaps, and links to apply.
+            </p>
+            <p>
+              <strong>Delivery approach:</strong> Phase 1 is a locally executed
+              MVP. Phase 2 evaluates AWS and GCP and targets a cloud-hosted
+              release. Dates below are targets, not completed claims.
+            </p>
+          </section>
+          <section class="jsa-panel">
+            <h2 id="solution-architecture">Proposed Solution Architecture</h2>
+            <div class="jsa-steps" aria-label="Proposed processing pipeline">
+              <div class="jsa-step">
+                <strong>Inputs</strong>Resume + preferences
+              </div>
+              <div class="jsa-step">
+                <strong>Discovery</strong>Dice MCP / Adzuna API
+              </div>
+              <div class="jsa-step">
+                <strong>Data processing</strong>Normalize + deduplicate
+              </div>
+              <div class="jsa-step">
+                <strong>AI evaluation</strong>LLM fit + evidence
+              </div>
+              <div class="jsa-step">
+                <strong>Output</strong>Ranked HTML report
+              </div>
+            </div>
+            <p class="jsa-note">
+              Architecture shown is the target workflow. Cloud hosting and LLM
+              scoring are not yet claimed as implemented.
+            </p>
+            <h3 id="ai-evaluation">LLM-based job fit evaluation</h3>
+            <p>
+              Planned evaluation includes required skills, relevant experience,
+              responsibilities, seniority, preferred qualifications, and career
+              alignment. Scores will be accompanied by evidence and missing
+              qualifications. Hard constraints such as location or work
+              arrangement will be assessed separately.
+            </p>
+            <h3 id="cloud-design">Cloud architecture — Phase 2</h3>
+            <p>
+              An architecture spike will compare AWS and GCP on deployment
+              simplicity, operating cost, security, logging, secrets management,
+              and suitability for a small Python application. The decision and
+              deployment design will be documented in an architecture decision
+              record (ADR).
+            </p>
+          </section>
+          <section class="jsa-panel">
+            <h2 id="technical-feasibility">Technical Feasibility Spikes</h2>
+            <div class="jsa-table-wrap">
+              <table class="jsa-table">
+                <thead>
+                  <tr>
+                    <th>Investigation</th>
+                    <th>Finding</th>
+                    <th>Disposition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dice MCP</td>
+                    <td>Initial test successfully returned 10 job postings.</td>
+                    <td>
+                      <span class="jsa-status jsa-status-complete"
+                        >Spike complete</span
+                      >
+                      Candidate source
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Adzuna API</td>
+                    <td>
+                      Initial API retrieval succeeded, including searches for
+                      Nashville and Atlanta.
+                    </td>
+                    <td>
+                      <span class="jsa-status jsa-status-complete"
+                        >Spike complete</span
+                      >
+                      Candidate source
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ZipRecruiter MCP</td>
+                    <td>
+                      Initial integration encountered error -32603 / HTTP 429.
+                    </td>
+                    <td>
+                      <span class="jsa-status jsa-status-complete"
+                        >Spike complete</span
+                      >
+                      Deferred
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>LLM scoring</td>
+                    <td>
+                      Prompt design, structured responses, quality and cost to
+                      be evaluated.
+                    </td>
+                    <td>
+                      <span class="jsa-status jsa-status-planned">Planned</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>AWS vs. GCP</td>
+                    <td>Hosting and operational architecture comparison.</td>
+                    <td>
+                      <span class="jsa-status jsa-status-planned">Planned</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Architecture decisions are tracked in ADR-001; cloud hosting will
+              receive a separate decision record.
+            </p>
+          </section>
+          <section class="jsa-panel">
+            <h2 id="work-status">Work Status</h2>
+            <div class="jsa-grid">
+              <div class="jsa-panel">
+                <h3 id="completed-work">Completed</h3>
+                <ul class="jsa-list">
+                  <li>Initial Dice MCP feasibility test</li>
+                  <li>Initial Adzuna API feasibility test</li>
+                  <li>ZipRecruiter MCP investigation and deferral</li>
+                  <li>
+                    Initial architecture decision documentation (ADR-001). ADRs
+                    and other documentation are found in the GitHub Repository:
+                    <a
+                      href="https://github.com/atenciop/job-search-agent"
+                      target="_blank"
+                      >GitHub Repository</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="jsa-panel">
+                <h3 id="in-progress-work">In Progress</h3>
+                <ul class="jsa-list">
+                  <li>Normalized job model design</li>
+                  <li>Source adapters and data validation</li>
+                  <li>Local MVP architecture and implementation planning</li>
+                </ul>
+              </div>
+              <div class="jsa-panel">
+                <h3 id="planned-work">Planned</h3>
+                <ul class="jsa-list">
+                  <li>Resume extraction and LLM fit evaluation</li>
+                  <li>Deduplication and ranked HTML report</li>
+                  <li>Local MVP testing and release</li>
+                  <li>
+                    Cloud architecture spike, deployment, and operational
+                    testing
+                  </li>
+                </ul>
+              </div>
+              <div class="jsa-panel">
+                <h3 id="delivery-principles">Delivery Principles</h3>
+                <ul class="jsa-list">
+                  <li>Separate verified results from planned capabilities</li>
+                  <li>Document tradeoffs and test findings</li>
+                  <li>Keep code and setup instructions reproducible</li>
+                  <li>Protect resume data, secrets, and API credentials</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="jsa-panel">
+            <h2 id="development-roadmap">
+              Development Roadmap &amp; Milestones
+            </h2>
+            <div class="jsa-table-wrap">
+              <table class="jsa-table">
+                <thead>
+                  <tr>
+                    <th>Target date</th>
+                    <th>Deliverable</th>
+                    <th>Acceptance / evidence</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Oct 13–16</td>
+                    <td>Job model, adapters, normalization</td>
+                    <td>
+                      Dice and Adzuna represented in a shared Python model
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Oct 17–19</td>
+                    <td>Resume parsing and AI matching prototype</td>
+                    <td>
+                      Structured LLM assessments with scores, evidence and gaps
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Oct 20–21</td>
+                    <td>Ranked HTML report</td>
+                    <td>Local end-to-end report with application URLs</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 22</td>
+                    <td>Local integration testing</td>
+                    <td>Test results, fixes and error-handling checks</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Oct 23</strong></td>
+                    <td><strong>Phase 1 — Local MVP v0.1</strong></td>
+                    <td>
+                      Validated local run; reserve 2–3 hours for README, setup
+                      guide, sample output and release notes
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Oct 24–25</td>
+                    <td>Cloud evaluation and ADR</td>
+                    <td>
+                      AWS/GCP tradeoffs, architecture diagram and selected
+                      approach
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Oct 26–27</td>
+                    <td>Cloud implementation</td>
+                    <td>Packaged app deployed to development environment</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 28</td>
+                    <td>Cloud testing</td>
+                    <td>
+                      Integration, secrets, logging, security and defects
+                      checked
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Oct 29</strong></td>
+                    <td><strong>Documentation and portfolio update</strong></td>
+                    <td>
+                      Reserve 3–4 hours for deployment guide, ADRs, diagram,
+                      lessons learned, README and site log
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Oct 30</strong></td>
+                    <td><strong>Phase 2 — Cloud release v0.2</strong></td>
+                    <td>
+                      Final validation, release notes, GitHub release and
+                      portfolio closeout
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="jsa-panel">
+            <h2 id="development-log">Development Log</h2>
+            <p class="jsa-note">
+              This log records observed progress; the roadmap above contains
+              future targets. Update entries as milestones are verified.
+            </p>
+            <div class="jsa-table-wrap">
+              <table class="jsa-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Update</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Oct 4–10, 2026</td>
+                    <td>
+                      Initial job-source feasibility work: Dice and Adzuna
+                      returned results; ZipRecruiter deferred after errors.
+                      ADR-001 prepared.
+                    </td>
+                    <td>Completed</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 13, 2026</td>
+                    <td>
+                      Job model and adapter development scheduled to begin.
+                    </td>
+                    <td>In progress / verify</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 16, 2026</td>
+                    <td>Job normalization checkpoint.</td>
+                    <td>Planned</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 19, 2026</td>
+                    <td>First end-to-end LLM matching checkpoint.</td>
+                    <td>Planned</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 23, 2026</td>
+                    <td>Local MVP and documentation.</td>
+                    <td>Planned</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 29, 2026</td>
+                    <td>Technical documentation and portfolio update.</td>
+                    <td>Planned</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 30, 2026</td>
+                    <td>Cloud release and closeout.</td>
+                    <td>Planned</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="jsa-panel">
+            <h2 id="source-code">Source Code &amp; Documentation</h2>
+            <p>
+              The public GitHub repository contains the source code, README,
+              setup instructions, architecture decisions, and release
+              documentation updated as the project progresses.
+            </p>
+            <p>
+              <strong><i class="fab fa-github"></i> View GitHub repository:</strong>
+              <a
+                href="https://github.com/atenciop/job-search-agent"
+                target="_blank"
+              >
+                github.com/atenciop/job-search-agent
+              </a>
+            </p>
+            <p>
+              <strong><i class="fab fa-github"></i> Download source:</strong>
+              GitHub's <em>Code →</em> <a
+                href="https://github.com/atenciop/job-search-agent/archive/refs/heads/main.zip"
+                target="_blank"
+                >Download ZIP</a
+            </p>
+            <p class="jsa-note">
+              Parts of this portfolio content were developed with assistance
+              from AI and reviewed for accuracy.
+            </p>
+          </section>
+        </article>
+      </main>
+    </div>
+    <script src="../../js/main.js" defer></script>
+  </body>
+</html>

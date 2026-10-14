@@ -1129,3 +1129,34 @@ nav a:hover {
     height: 52px;
   }
 }
+
+/* Job Search Agent project — scoped additions */
+.jsa-page {max-width:1100px; margin:0 auto; padding:1.25rem 1rem 3rem;}
+.jsa-page p,.jsa-page li {line-height:1.65;}
+.jsa-eyebrow {font-weight:700;letter-spacing:.09em;text-transform:uppercase;font-size:.78rem;color:var(--accent);}
+.jsa-lead {font-size:1.1rem;max-width:75ch;}
+.jsa-meta,.jsa-actions,.jsa-chips {display:flex;flex-wrap:wrap;gap:.65rem;align-items:center;}
+.jsa-status {display:inline-block;border:1px solid var(--border-color);padding:.3rem .7rem;border-radius:999px;font-size:.78rem;font-weight:700;}
+.jsa-status-progress {color:var(--text-color);background:var(--panel-bg);border-color:var(--accent);}
+.jsa-status-complete {background:var(--panel-bg);border-color:#22a06b;}
+.jsa-status-planned {background:var(--panel-bg);}
+.jsa-button {display:inline-flex;align-items:center;justify-content:center;padding:.65rem .9rem;border:1px solid var(--border-color);border-radius:9px;text-decoration:none;color:var(--text-color);background:var(--panel-bg);font-weight:650;}
+.jsa-button:hover,.jsa-button:focus-visible {border-color:var(--accent);outline-offset:3px;}
+.jsa-button[aria-disabled="true"] {opacity:.65;cursor:not-allowed;}
+.jsa-note {font-size:.85rem;opacity:.82;}
+.jsa-panel {background:var(--panel-bg);border:1px solid var(--border-color);border-radius:14px;padding:1.25rem;margin:1.2rem 0;min-width:0;}
+.jsa-panel h2 {margin-top:0;}
+.jsa-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;}
+.jsa-grid .jsa-panel {margin:0;}
+.jsa-table-wrap {overflow-x:auto;}
+.jsa-table {width:100%;border-collapse:collapse;min-width:590px;}
+.jsa-table th,.jsa-table td {padding:.8rem;text-align:left;border-bottom:1px solid var(--border-color);vertical-align:top;}
+.jsa-table th {background:var(--bg-color);}
+.jsa-list {padding-left:1.4rem;}
+.jsa-steps {display:flex;flex-wrap:wrap;gap:.55rem;align-items:stretch;}
+.jsa-step {flex:1 1 145px;background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:.85rem;text-align:center;}
+.jsa-step strong {display:block;}
+.jsa-tile-icon {width:90px;height:90px;border-radius:16px;background:linear-gradient(135deg,#182b4a,#365f8c);color:#fff;font-size:4.3rem;line-height:75px;text-align:center;margin-bottom:.75rem;}
+.jsa-page a:not(.jsa-button) {color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px;}
+.jsa-page :target {scroll-margin-top:115px;}
+@media(max-width:720px) {.jsa-grid{grid-template-columns:1fr}.jsa-page{padding:.8rem}.jsa-panel{padding:1rem}.jsa-page h1{font-size:1.65rem}}
